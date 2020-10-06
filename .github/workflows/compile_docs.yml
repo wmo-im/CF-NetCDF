@@ -11,7 +11,7 @@ jobs:
       - run: |
           mkdir output  # create output dir
           # this will also include README.md
-          echo "::set-env name=FILELIST::$(printf '"%s" ' ./markdown/*.md)"
+          echo "FILELIST=$(printf '"%s" ' ./markdown/*.md)" >> $GITHUB_ENV
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/result.pdf ${{ env.FILELIST }}
