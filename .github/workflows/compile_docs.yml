@@ -1,5 +1,5 @@
 # yml file based on https://github.com/pandoc/pandoc-action-example
-name: Advanced Usage
+name: compile docs
 
 on: push
 
@@ -9,11 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "Lorem ipsum" > lorem_1.md  # create two example files
-          echo "dolor sit amet" > lorem_2.md
           mkdir output  # create output dir
           # this will also include README.md
-          echo "::set-env name=FILELIST::$(printf '"%s" ' *.md)"
+          echo "::set-env name=FILELIST::$(printf '"%s" ' ./markdown/*.md)"
       - uses: docker://pandoc/latex:2.9
         with:
           args: --output=output/result.pdf ${{ env.FILELIST }}
