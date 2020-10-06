@@ -1,7 +1,7 @@
 # yml file based on https://github.com/pandoc/pandoc-action-example
 name: compile docs
 
-on: push
+on: release
 
 jobs:
   convert_via_pandoc:
