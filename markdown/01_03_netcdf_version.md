@@ -1,0 +1,3 @@
+- regulation specifying NetCDF version
+- NetCDF4 should be used but NetCDF3 permissible for backwards compatibility
+- Files shall end in .nc

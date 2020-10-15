@@ -1,0 +1,1 @@
+- Regulations on chunking and compression

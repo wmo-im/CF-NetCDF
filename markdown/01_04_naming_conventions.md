@@ -1,0 +1,3 @@
+- Regulation specifying naming convention to be used
+- Case is significant, CF makes no recommendation
+- WMO-CF extends by making lower snake case mandatory
