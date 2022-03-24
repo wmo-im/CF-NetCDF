@@ -18,13 +18,13 @@
 . Global scope / root group
 .. The global scope of the profile contains data and metadata which are relevant to the entire volume.
 .. Attributes
-... Table FM-302_1 lists the global attributes that shall be included in addition to those defined under regulation 6.
-... Table FM-302_2 lists the mandatory values that shall be used for the global attributes where defined.
-... Table FM-302_3 lists additionally defined global attributes that are optional.
+... Table FM-301_1 lists the global attributes that shall be included in addition to those defined under regulation 6.
+... Table FM-301_2 lists the mandatory values that shall be used for the global attributes where defined.
+... Table FM-301_3 lists additionally defined global attributes that are optional.
 
 .. Ancillary variables
-... Table FM-302_4 lists the global variables that shall be included in the global / root group.
-... Table FM-302_5 lists the global variables that should be included in the global / root group.
+... Table FM-301_4 lists the global variables that shall be included in the global / root group.
+... Table FM-301_5 lists the global variables that should be included in the global / root group.
 
 . Sweep groups
 .. A sweep group contains all of the data and metadata related to Sweep object. This includes the dimensions and coordinates which define the basic geometry of the sweep (Rays and Range Bins), the measured radar/lidar quantities (Datasets), as well as many supporting ancillary variables. Each sweep group may also contain subgroups to cater for specialized metadata such as monitoring information.
@@ -38,35 +38,35 @@
 ... The `prt` dimension may define the number of pulse repetition times used in a pulsing scheme. This dimension is optional for fixed, staggered and dual PRT schemes but required for more complex schemes.
 
 .. Coordinate variables
-... Table FM-302_6 lists the coordinate variables that shall be used in the sweep groups.
+... Table FM-301_6 lists the coordinate variables that shall be used in the sweep groups.
 
 .. Ancillary variables
-... Table FM-302_7 lists the ancillary variables that shall be included in the sweep groups.
-... Table FM-302_8 lists the ancillary variables that may be included in the sweep groups.
+... Table FM-301_7 lists the ancillary variables that shall be included in the sweep groups.
+... Table FM-301_8 lists the ancillary variables that may be included in the sweep groups.
 
 .. Dataset variables (observed and quality data)
 ... Dataset variables shall have dimensions `(time, range)`.
-... Dataset variables for well known radar moments shall be named according to Table FM-302_9.
+... Dataset variables for well known radar moments shall be named according to Table FM-301_9.
 ... The general regulations for variables (section 5) shall apply, including the regulations on mandatory and optional attributes.
 ... The `coordinates` attribute shall be set to `"elevation azimuth range"`
-... Additional attributes for field / geophysical variables are defined in Table FM-302_10.
+... Additional attributes for field / geophysical variables are defined in Table FM-301_10.
 
 .. Monitoring subgroup
 
 ... If monitoring data is available, a monitoring subgroup will be included in each relevant sweep group, to store the monitoring variables.
 ... The group shall be named `monitoring`.
-... Table FM-302_11 lists the variables that may be included in this subgroup when present.
+... Table FM-301_11 lists the variables that may be included in this subgroup when present.
 
 . Radar parameters group
 .. The radar parameters group holds optional ancillary variables that are specific to the radar instrument.
 .. This group shall be located at the global scope and named `radar_parameters`.
-.. Table FM-302_12 lists the variables which may be included in this group.
+.. Table FM-301_12 lists the variables which may be included in this group.
 .. This group may be omitted from the file if no radar parameters are to be stored.
 
 . Lidar parameters group
 .. The lidar group holds optional ancillary variables that are specific to the lidar instrument.
 .. This group shall be located at the global scope and named `lidar_parameters`.
-.. Table FM-302_13 lists the variables which may be included in this group.
+.. Table FM-301_13 lists the variables which may be included in this group.
 .. This group may be omitted from the file if no lidar parameters are to be stored.
 
 . Radar calibration group
@@ -74,7 +74,7 @@
 .. This group shall be located at the global scope and named `radar_calibration`.
 .. Dimensions
 ... The `calib` dimension shall define the number of calibrations stored.
-.. Table FM-302_14 lists the ancillary variables which may be included in this group.
+.. Table FM-301_14 lists the ancillary variables which may be included in this group.
 .. This group may be omitted from the file if no radar calibrations are to be stored.
 
 . Lidar calibration group
@@ -106,35 +106,35 @@ include::./fm301-table2.csv[]
 include::./fm301-table3.csv[]
 |===
 
-.Metadata variables with global scope that shall be included in WMO-CF Radial files. Units and other attributes are defined in Table FM-302_4b.
+.Metadata variables with global scope that shall be included in WMO-CF Radial files. Units and other attributes are defined in Table FM-301_4b.
 [caption="Table FM-301_4a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table4a.csv[]
 |===
 
-.Mandatory attributes for the global variables defined in Table FM-302_4a.
+.Mandatory attributes for the global variables defined in Table FM-301_4a.
 [caption="Table FM-301_4b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table4b.csv[]
 |===
 
-.Metadata variables with global scope that are conditional or optional. Attributes are listed in Table FM-302_5b.
+.Metadata variables with global scope that are conditional or optional. Attributes are listed in Table FM-301_5b.
 [caption="Table FM-301_5a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table5a.csv[]
 |===
 
-.Attributes for those variables listed in Table FM-302_5a.
+.Attributes for those variables listed in Table FM-301_5a.
 [caption="Table FM-301_5b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table5b.csv[]
 |===
 
-.Coordinate variables for the sweep groups. Attributes are defined in Table FM-302_6b.
+.Coordinate variables for the sweep groups. Attributes are defined in Table FM-301_6b.
 [caption="Table FM-301_6a: "]
 [format="csv", options="header"]
 |===
@@ -148,28 +148,28 @@ include::./fm301-table6a.csv[]
 include::./fm301-table6b.csv[]
 |===
 
-.Mandatory metadata variables that shall be included in the sweep groups. Table FM-302_7b lists the attributes for these variables where defined.
+.Mandatory metadata variables that shall be included in the sweep groups. Table FM-301_7b lists the attributes for these variables where defined.
 [caption="Table FM-301_7a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table7a.csv[]
 |===
 
-.Mandatory attributes defined for the sweep group metadata variables (Table FM-302_7a).
+.Mandatory attributes defined for the sweep group metadata variables (Table FM-301_7a).
 [caption="Table FM-301_7b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table7b.csv[]
 |===
 
-.Optional / conditional metadata variables that may be reported in the sweep groups. Attributes are define in Table FM-302_8b.
+.Optional / conditional metadata variables that may be reported in the sweep groups. Attributes are define in Table FM-301_8b.
 [caption="Table FM-301_8a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table8a.csv[]
 |===
 
-.Attributes for the optional sweep group metadata variables defined in Table FM-302_8a
+.Attributes for the optional sweep group metadata variables defined in Table FM-301_8a
 [caption="Table FM-301_8b: "]
 [format="csv", options="header"]
 |===
@@ -191,56 +191,56 @@ include::./fm301-table9.csv[]
 include::./fm301-table10.csv[]
 |===
 
-.Optional / conditional variables that may be included in the monitoring subgroup when present. Attributes are defined in Table FM-302_11b.
+.Optional / conditional variables that may be included in the monitoring subgroup when present. Attributes are defined in Table FM-301_11b.
 [caption="Table FM-301_11a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table11a.csv[]
 |===
 
-.Attributes defined for those variables listed in Table FM-302_11a.
+.Attributes defined for those variables listed in Table FM-301_11a.
 [caption="Table FM-301_11b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table11b.csv[]
 |===
 
-.List of optional / conditional metadata variables that may be reported for the radar parameters group. Attributes are defined in Table FM-302_12b.
+.List of optional / conditional metadata variables that may be reported for the radar parameters group. Attributes are defined in Table FM-301_12b.
 [caption="Table FM-301_12a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table12a.csv[]
 |===
 
-.Attributes defined for those variables listed in Table FM-302_12a.
+.Attributes defined for those variables listed in Table FM-301_12a.
 [caption="Table FM-301_12b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table12b.csv[]
 |===
 
-.List of optional / conditional metadata variables that may be reported for the lidar parameters group. Attributes are defined in Table FM-302_13b.
+.List of optional / conditional metadata variables that may be reported for the lidar parameters group. Attributes are defined in Table FM-301_13b.
 [caption="Table FM-301_13a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table13a.csv[]
 |===
 
-.Attributes defined for those variables listed in Table FM-302_13a.
+.Attributes defined for those variables listed in Table FM-301_13a.
 [caption="Table FM-301_13b: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table13b.csv[]
 |===
 
-.List of optional / conditional metadata variables that may be reported for the radar calibration group. Attributes are defined in Table FM-302_14b.
+.List of optional / conditional metadata variables that may be reported for the radar calibration group. Attributes are defined in Table FM-301_14b.
 [caption="Table FM-301_14a: "]
 [format="csv", options="header"]
 |===
 include::./fm301-table14a.csv[]
 |===
 
-.Attributes defined for those variables listed in Table FM-302_14a.
+.Attributes defined for those variables listed in Table FM-301_14a.
 [caption="Table FM-301_14b: "]
 [format="csv", options="header"]
 |===
