@@ -1,0 +1,108 @@
+== FM 303-XX WMO-CF MARINE Profile
+=== Profile
+
+. Scope
+.. This profile is intended for the reporting of meteorological and/or oceanographic observations along a vertical line at a fixed horizontal position and fixed time from a single platform.
+.. A ragged array representation is used to allow multiple profiles to be reported (e.g. see CF v1.8 conventions). This may be either a contiguous or indexed ragged array.
+.. Only data for a single platform shall be included in the file.
+.. Groups are not supported in this profile and groups other than the root group shall not be used.
+
+. Global scope / root group
+.. Global attributes
+... The regulations defined in section 6 for global attributes shall apply.
+... Table 1 lists the values to be used for the indicate attributes.
+
+.. Station / platform identifier
+... For platforms where a WIGOS station identifier has been assigned the identifier shall be included in the file using the `wmo__wsi` global attribute.
+... For platforms without a WIGOS station identifier the traditional WMO identifier shall be reported using the `wmo__id` global attribute.
+
+.. Dimensions
+... Files containing marine profile data shall have the following dimensions:
+.... `obs`, the `obs` dimension shall be used to indicate the total number of observations within the file.
+.... `profile`, the `profile` dimension shall be used to indicate the number of profiles contained in the file and to index the observations to a profile. When there is a single profile in the file this shall have dimension 1.
+
+.. Coordinate Variables
+... Table 2 lists the coordinate variables that shall used with this profile.
+
+.. Profile identification
+
+... Table 3 lists the variables that shall be used to identify the profile that an observation belongs to.
+... `profile` provides the identifier for a given profile.
+
+.. Data variables
+... The general regulations for data variables, including mandatory attributes, defined in regulation 5 shall apply.
+... Only data variables with a valid `standard_name` shall be included.
+... Data variables shall have a single dimension `obs`.
+... The NetCDF variable name shall be interpreted as the short name for the variable.
+... Multiple variables sharing the same short name shall follow the following naming convention: `<measurand_short_name>_<n>`, where `<n>` is incremented for each additional variable sharing the same short name. For example, `salinity_1` and `salinity_2` in the case of two salinity sensors on an observing platform.
+... The profile variable shall be used to indicate which profile an observation belongs to.
+
+.. Ancillary variables
+... The naming of the ancillary variables shall take the form `<measurand_short_name>_<n>_<ancillary_variable>`
+... Table 4 lists the mandatory ancillary variables that shall be reported for each observed / measured variable
+... Table 5 lists the conditional or optional ancillary variables defined for the observed / measured variables.
+
+=== FM 303-XX Tables
+
+.Values that shall be used for the indicated global attributes.
+[caption="Table FM-303_1: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table1.csv[]
+|===
+
+.Coordinate variables that shall be used in the marine profile profile. Attributes are given in Table 2b.
+[caption="Table FM-303_2a: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table2a.csv[]
+|===
+
+.Attributes define for the coordinate variables given in Table 2a.
+[caption="Table FM-303_2b: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table2b.csv[]
+|===
+
+.Variables defined to identify the profile an observation belongs to and that shall be included in marine profile files. Attributes are listed in Table 3b.
+[caption="Table FM-303_3a: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table3a.csv[]
+|===
+
+.Attributes define for the profile variables listed in Table 3a.
+[caption="Table FM-303_3b: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table3b.csv[]
+|===
+
+.Ancillary variables defined and that shall be reported for each measured / observed variable. Attributes are given in Table 4b. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-303_4a: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table4a.csv[]
+|===
+
+.Attributes for the ancillary variables defined in Table 4a .<prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-303_4b: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table4b.csv[]
+|===
+
+.Conditional / optional ancillary variables defined and that should be reported for each measured / observed variable when the described conditions are met. Attributes are given in Table 5b. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-303_5a: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table5a.csv[]
+|===
+
+.Attributes for the ancillary variables defined in Table 5a. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-303_5b: "]
+[format="csv", options="header"]
+|===
+include::./fm303-table5b.csv[]
+|===

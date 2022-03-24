@@ -1,4 +1,4 @@
 Variable path / name,Attribute,Type,Value
 /<prefix>_sensor_installed_height,units,string,meters
-</prefix>_sensor_measurement_method,wmo__parameter_name,string,
-,wmo__parameter_uri,string,
+,wmo  parameter_name,string,
+</prefix>_sensor_measurement_method,wmo  parameter_uri,string,

@@ -1,5 +1,5 @@
 == FM 301-XX WMO-CF RADIAL
-=== Regulations
+=== Profile
 
 . Scope
 .. This profile is for the representation of weather radar and lidar data in the native instrument-centric polar coordinates. Such data is the primary output of the radar/lidar signal processor known as "Level 2" data. This is the lowest level output commonly available from operational instruments and is well suited to data exchange.

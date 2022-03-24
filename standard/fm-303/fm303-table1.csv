@@ -1,0 +1,4 @@
+Attribute name,Type,Value
+Conventions,string,""CF-1.8, WMO CF-1.0, ACDD-1.3""
+wmo  cf_profile,string,""FM 302-XX""
+featureType,string,""profile""

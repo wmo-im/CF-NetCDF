@@ -86,8 +86,7 @@ Example observing platforms include, inter alia: crewed vessels making observati
 . General regulations for variables and variable attributes
 .. A distinction is made between those variables that contain observed, measured or simulated data (hereafter data variables) and those containing metadata or ancillary information (ancillary data).
 .. Data variables
-... Table 1 below lists the variable attributes that are defined for observed
-data and for use with the WMO-CF extensions.
+... Table 1 below lists the variable attributes that are defined for observed data and for use with the WMO-CF extensions.
 ... Attributes marked mandatory (M) shall be included for all variables.
 ... Attributes marked conditional \(C) shall be included when the conditions described below are met.
 ... Attributes marked optional (O) are optional.

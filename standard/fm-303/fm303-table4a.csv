@@ -1,0 +1,6 @@
+Variable path / name,Dimensions,Type,Comments
+/<prefix>_sensor,(profile),string,Name of sensor
+/<prefix>_sensor_make,(profile),string,Manufacturer of sensor
+/<prefix>_sensor_model,(profile),string,Model of sensor
+/<prefix>_sensor_serial_number,(profile),string,Sensor serial number
+/<prefix>_sensor_calibration_date,(profile),float,Last calibration data of sensor

@@ -1,0 +1,5 @@
+Variable path / name,Dimensions,Type,Comments
+/lat,(obs),float or double,Latitude of the observations
+/lon,(obs),float or double,Longitude of the observations
+/depth,(obs),float or double,"Vertical position of the observing station or platform relative to sea level, for example Argo profile depth."
+/time,(obs),float or double,Date and time of the observation
