@@ -1,4 +1,4 @@
-== FM 303-XX WMO-CF MARINE Profile
+== FM 303-XX WMO-CF MARINE PROFILE
 === Profile
 
 . Scope
