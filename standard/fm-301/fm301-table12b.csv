@@ -1,0 +1,6 @@
+Variable path / name,Attribute,Kind,Value
+/radar_parameters/antenna_gain_h,units,string,dBi
+/radar_parameters/antenna_gain_v,units,string,dBi
+/radar_parameters/beam_width_h,units,string,degrees
+/radar_parameters/beam_width_v,units,string,degrees
+/radar_parameters/receiver_bandwidth,units,string,s-1

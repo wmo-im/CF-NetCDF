@@ -1,0 +1,3 @@
+Variable path / name,Dimensions,Type,Comments
+/<prefix>_sensor_installed_height,(trajectory),float,Value to be added to sensor_depth to get vertical position of sensor relative to sea surface.
+</prefix>_sensor_measurement_method,(trajectory),string,"The method used by the sensor to measure the parameter, e.g. capacitive humidity sensor."

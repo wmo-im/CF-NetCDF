@@ -1,0 +1,13 @@
+Variable path/name,attribute,kind,value
+/sweep_<n>/time,units,string,"""seconds since <reftime>"" where <reftime> is an ISO8601 time string of the form YYYY-MM-DDThh:mm:ssZ"
+,calendar,string,See CF Conventions Appendix A
+,standard_name,string,"""time"""
+/sweep_<n>/range,units,string,"""meters"""
+,standard_name,string,"""projection_range_coordinate"""
+,long_name,string,"""range_to_measurement_volume"""
+,axis,string,"""radial_range_coordinate"""
+,spacing_is_constant,Boolean / string,"""true"" if range bins are evenly spaced"
+,meters_to_center_of_first_gate,float,Range to start of first gate in meters
+,meters_between_gates,float,Range between consecutive gates in meters.  Required if `spacing_is_constant` is true
+/frequency,units,string,"""s -1"""
+,standard_name,string,

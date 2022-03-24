@@ -1,0 +1,9 @@
+variable path/name,Dimensions,Type,Comment
+/volume_number,,int,"Volume numbers are sequential, relative to some arbitrary start time, and may wrap."
+/time_coverage_start,,string,UTC time of first ray in file.
+/time_coverage_end,,string,UTC time of the last ray in the file.
+/latitude,,double,Latitude of instrument using WGS84. For a mobile platform this is the latitude of the instrument at the start of the volume
+/longitude,,double,Longitude of instrument using WGS84. For a mobile platform this is the longitude of the instrument at the start of the volume
+/altitude,,double,"Altitude of instrument above mean sea level, using WGS84 and EGM2008 geoid corrections. For a scanning radar this is the center of rotation of the antenna. For a mobile platform this is the altitude at the start of the volum"
+/platform_type,,string,Type of platform upon which the radar system is mounted. Allowed values are listed in Table 15
+/instrument_type,,string,Type of instrument. Allowed values are listed in Table 15.

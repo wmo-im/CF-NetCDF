@@ -1,0 +1,38 @@
+Variable path / name,Quantity (standard_name),Description (long_name)
+/sweep_<n>/DBZH,radar_equivalent_reflectivity_factor_h,Equivalent reflectivity factor H
+/sweep_<n>/DBZV,radar_equivalent_reflectivity_factor_v,Equivalent reflectivity factor V
+/sweep_<n>/ZH,radar_linear_equivalent_reflectivity_factor_h,Linear equivalent reflectivity factor H
+/sweep_<n>/ZV,radar_linear_equivalent_reflectivity_factor_v,Linear equivalent reflectivity factor V
+/sweep_<n>/DBTH,radar_equivalent_reflectivity_factor_h,Total power H (uncorrected reflectivity)
+/sweep_<n>/DBTV,radar_equivalent_reflectivity_factor_v,Total power V (uncorrected reflectivity)
+/sweep_<n>/TH,radar_linear_equivalent_reflectivity_factor_h,Linear total power H (uncorrected reflectivity)
+/sweep_<n>/TV,radar_linear_equivalent_reflectivity_factor_v,Linear total power V (uncorrected reflectivity)
+/sweep_<n>/VRADH,radial_velocity_of_scatterers_away_from_instrument_h,Radial velocity of scatterers away from instrument H
+/sweep_<n>/VRADV,radial_velocity_of_scatterers_away_from_instrument_v,Radial velocity of scatterers away from instrument V
+/sweep_<n>/WRADH,radar_doppler_spectrum_width_h,Doppler spectrum width H
+/sweep_<n>/WRADV,radar_doppler_spectrum_width_v,Doppler spectrum width V
+/sweep_<n>/ZDR,radar_differential_reflectivity_hv,Log differential reflectivity H/V
+/sweep_<n>/LDR,radar_linear_depolarization_ratio,Log-linear depolarization ratio HV
+/sweep_<n>/LDRH,radar_linear_depolarization_ratio_h,Log-linear depolarization ratio H
+/sweep_<n>/LDRV,radar_linear_depolarization_ratio_v,Log-linear depolarization ratio V
+/sweep_<n>/PHIDP,radar_differential_phase_hv,Differential phase HV
+/sweep_<n>/KDP,radar_specific_differential_phase_hv,Specific differential phase HV
+/sweep_<n>/PHIHX,radar_differential_phase_copolar_h_crosspolar_v,Cross-polar differential phase
+/sweep_<n>/RHOHV,radar_correlation_coefficient_hv,Correlation coefficient HV
+/sweep_<n>/RHOHX,radar_correlation_coefficient_copolar_h_crosspolar_v,Co-to-cross polar correlation coefficient H
+/sweep_<n>/RHOVX,radar_correlation_coefficient_copolar_v_crosspolar_h,Co-to-cross polar correlation coefficient V
+/sweep_<n>/DBM,radar_received_signal_power,Log power
+/sweep_<n>/DBMHC,radar_received_signal_power_copolar_h,Log power co-polar H
+/sweep_<n>/DBMHX,radar_received_signal_power_crosspolar_h,Log power cross-polar H
+/sweep_<n>/DBMVC,radar_received_signal_power_copolar_v,Log power co-polar V
+/sweep_<n>/DBMVX,radar_received_signal_power_crosspolar_v,Log power cross-polar V
+/sweep_<n>/SNR,radar_signal_to_noise_ratio,Signal-to-noise ratio
+/sweep_<n>/SNRHC,radar_signal_to_noise_ratio_copolar_h,Signal-to-noise ratio co-polar H
+/sweep_<n>/SNRHX,radar_signal_to_noise_ratio_crosspolar_h,Signal-to-noise ratio cross-polar H
+/sweep_<n>/SNRVC,radar_signal_to_noise_ratio_copolar_v,Signal-to-noise ratio co-polar V
+/sweep_<n>/SNRVX,radar_signal_to_noise_ratio_crosspolar_v,Signal to noise ratio cross polar V
+/sweep_<n>/NCP,radar_normalized_coherent_power,Normalized coherent power
+/sweep_<n>/NCPH,radar_normalized_coherent_power_h,Normalized coherent power co-polar H
+/sweep_<n>/NCPV,radar_normalized_coherent_power_v,Normalized coherent power co-polar V
+/sweep_<n>/RR,radar_estimated_precipitation_rate,Rain rate
+/sweep_<n>/REC,radar_scatterer_classification,Radar echo classification

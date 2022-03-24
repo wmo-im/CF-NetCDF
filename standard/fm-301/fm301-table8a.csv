@@ -1,0 +1,18 @@
+Variable path / name,Dimensions,Kind,Comment
+/sweep_<n>/polarization_mode,none,string,Polarization mode used during sweep. Allowed values are listed in Table 15
+/sweep_<n>/polarization_sequence,(prt),string,"Polarization sequence for each PRT that is used. Only applicable if `prt_mode` is ""hybrid"".  As an example, the form of it would be ['H','H','V','V','H'] for HHVVH pulsing"
+/sweep_<n>/rays_are_indexed,none,Boolean / string,"Indicates whether or not the ray angles (elevation in RHI sweep mode, azimuth in other modes) are indexed to a regular grid."
+/sweep_<n>/rays_angle_resolution,none,float,"If `rays_are_indexed` is true, this is the resolution of the angular grid – i.e. the delta angle between successive ray"
+/sweep_<n>/qc_procedures,none,string,"General-purpose string for storing any information that describes the QC procedures performed on this sweep. Any text-based encoding may be used including simple text, XML, JSON etc"
+/sweep_<n>/target_scan_rate,none,float,Intended scan rate for this sweep. The actual scan rate is stored in scan_rate. This variable is optional. Omit if not available.
+/sweep_<n>/scan_rate,(time),float,Actual antenna scan rate. Set to negative if counter- clockwise in azimuth or decreasing in elevation. Positive otherwise.
+/sweep_<n>/antenna_transition,(time),byte,"1 if antenna is in transition, i.e. between sweeps, 0 if not. If transition rays are not included in the file this varible may be omitted."
+/sweep_<n>/pulse_width,(time),float,Length of transmitted pulse.
+/sweep_<n>/calib_index,(time),int,Index for the radar calibration that applies to this pulse width. The value must match one of the calibration indexes listed by `/radar_calibration/calib_index`.
+/sweep_<n>/rx_range_resolution,(time),float,Resolution of the raw receiver samples if different to `meters_between_gate`s. Raw data may be resampled before data storage.
+/sweep_<n>/prt,(time),float,"Pulse repetition time. For staggered prt, also see `prt_ratio`."
+/sweep_<n>/prt_ratio,(time),float,Ratio of prt/prt2. For dual/staggered prt mode.
+/sweep_<n>/prt_sequence,"(time, prt)",foat,"Sequence of prts used. Optional for fixed, staggered and dual, which can make use of `prt` and `prt_ratio`. Required for more complicated pulsing schemes."
+/sweep_<n>/nyquist_velocity,(time),float,Unambiguous velocity. This is the effective Nyquist velocity after unfolding. See also the field-specific attributes `fold_limit_lower` and `fold_limit_upper`.
+/sweep_<n>/unambiguous_range,(time),float,Unambiguous range
+/sweep_<n>/n_samples,(time),int,"Maximum number of samples used to compute moments. The actual number of samples used may vary from field to field. This value refers to the maximum number of samples used for any field. The Dataset attribute `sampling_ratio` is the actual number of samples used for a given field, divided by `n_samples`. It will generally be 1.0, the default."

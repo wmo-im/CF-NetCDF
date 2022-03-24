@@ -1,0 +1,10 @@
+Variable path / name,attribute,kind,value
+/sweep_<n>/fixed_angle,units,string,"""degrees"""
+/sweep_<n>/azimuth,units,string,"""degrees"""
+,standard_name,string,"""sensor_to_target_azimuth_angle"""
+,long_name,string,"""Azimuth angle from true north"""
+,axis,string,"""radial_azimuth_coordinate"""
+/sweep_<n>/elevation,units,string,"""degrees"""
+,standard_name,string,"""sensor_to_target_elevation_angle"""
+,long_name,string,"""Elevation angle from horizontal plane"""
+,axis,string,"""radial_elevation_coordinate"""

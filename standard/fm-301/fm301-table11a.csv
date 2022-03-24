@@ -1,0 +1,12 @@
+Variable path / name,Dimensions,Kind,Comment
+/sweep_<n>/monitoring/radar_measured_transmit_power_h,(time),float,Measured transmit power H polarization
+/sweep_<n>/monitoring/radar_measured_transmit_power_v,(time),float,Measured transmit power V polarization
+/sweep_<n>/monitoring/radar_measured_sky_noise,(time),float,Noise measured at the receiver when connected to the antenna with no noise source connected.
+/sweep_<n>/monitoring/radar_measured_cold_noise,(time),float,"Noise measured at the receiver when connected to the noise source, but it is not enabled."
+/sweep_<n>/monitoring/radar_measured_hot_noise,(time),float,Noise measured at the receiver when it is connected to the noise source and the noise source is on.
+/sweep_<n>/monitoring/phase_difference_transmit_hv,(time),float,Phase difference between transmitted horizontally and vertically-polarized signals as determined from the first valid range bins
+/sweep_<n>/monitoring/antenna_pointing_accuracy_elev,(time),float,Antenna-pointing accuracy in elevation
+/sweep_<n>/monitoring/antenna_pointing_accuracy_az,(time),float,Calibration offset for the horizontal channel
+/sweep_<n>/monitoring/calibration_offset_h,(time),float,Calibration offset for the horizontal channel
+/sweep_<n>/monitoring/calibration_offset_v,(time),float,Calibration offset for the vertical channel
+/sweep_<n>/monitoring/zdr_offset,(time),float,ZDR offset (bias)

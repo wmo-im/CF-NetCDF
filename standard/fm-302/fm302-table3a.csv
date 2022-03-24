@@ -1,0 +1,3 @@
+Variable path / name,Dimensions,Type,Comments
+/trajectory,(trajectory),string,Identifier for trajectory
+/trajectory_index,(obs),int,Index of the trajectory an observation belongs to.

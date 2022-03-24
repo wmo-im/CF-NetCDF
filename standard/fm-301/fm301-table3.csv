@@ -1,0 +1,6 @@
+Attribute name,Type,Convention,Value or description
+site_name,string,CF/Radial,Name of site where data were gathered
+scan_name,string,CF/Radial,"Name of scan strategy used, if applicable"
+scan_id,int,CF/Radial,"Scan strategy id, if applicable. Assumed 0 if missing."
+ray_times_increase,Boolean,CF/Radial,"""true"" or ""false"". Set to true if ray times increase monotonically throughout all of the sweeps in the volume."
+simulated,Boolean,ODIM,"""true"" or ""false"". Set to true if data in this file are simulated."

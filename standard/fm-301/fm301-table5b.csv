@@ -1,0 +1,3 @@
+Variable path/name,Attribute ,Type,Value
+/altitude_agl,units,string,"""meters"""
+,standard_name,string,"""height"""

@@ -1,0 +1,7 @@
+Variable path/name,Dimensions,Kind,Comment
+/lidar_parameters/beam_divergence,none,float,Transmit side
+/lidar_parameters/field_of_view,none,float,Receive side
+/lidar_parameters/aperture_diameter,none,float,
+/lidar_parameters/aperture_efficency,none,float,
+/lidar_parameters/peak_power,none,float,
+/lidar_parameters/pulse_energy,none,float,

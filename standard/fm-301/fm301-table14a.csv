@@ -1,0 +1,51 @@
+Variable path/name,Dimensions,Kind,Comment
+/radar_calibration/calib_index,(calib),byte,Calibration index for each ray
+/radar_calibration/time,(calib),float,Time of calibration
+/radar_calibration/pulse_width,(calib),float,Pulse width for this calibration
+/radar_calibration/antenna_gain_h,(calib),float,"Derived antenna gain, H channel"
+/radar_calibration/antenna_gain_v,(calib),float,"Derived antenna gain, V channel"
+/radar_calibration/xmit_power_h,(calib),float,Transmit powr H channel
+/radar_calibration/xmit_power_v,(calib),float,Transmit power V channel
+/radar_calibration/two_way_waveguide_loss_h,(calib),float,"2-way waveguide loss measurement plan to feed horn, H channel"
+/radar_calibration/two_way_waveguide_loss_v,(calib),float,"2-way waveguide loss measurement plane to feed horn, V channel"
+/radar_calibration/two_way_radome_loss_h,(calib),float,"2-way radome loss, H channel"
+/radar_calibration/two_way_radome_loss_v,(calib),float,"2-way radome loss, V channel"
+/radar_calibration/receiver_mismatch_loss,(calib),float,Receiver filter bandwidth mismatch loss
+/radar_calibration/receiver_mismatch_loss_h,(calib),float,"Receiver filter bandwidth mismatch loss, H channel"
+/radar_calibration/receiver_mismatch_loss_v,(calib),float,"Receiver filter bandwidth mismatch loss, V channel"
+/radar_calibration/radar_constant_h,(calib),float,"Radar constant, H channel"
+/radar_calibration/radar_constant_v,(calib),float,"Radar constant, V channel"
+/radar_calibration/probert_jones_correction,(calib),float,Probert Jones antenna correction factor
+/radar_calibration/dielectric_factor_used,(calib),float,The |K2| in the radar equation
+/radar_calibration/noise_hc,(calib),float,"Measured noise level, H co-pol channel"
+/radar_calibration/noise_vc,(calib),float,"Measured noise level, V co-pol channel"
+/radar_calibration/noise_hx,(calib),float,"Measured noise level, H cross-pol channel"
+/radar_calibration/noise_vx,(calib),float,"Measured noise level, V cross-pol channel"
+/radar_calibration/receiver_gain_hc,(calib),float,"Measured receiver gain, H co-pol channel"
+/radar_calibration/receiver_gain_vc,(calib),float,"Measured receiver gain, V co-pol channel"
+/radar_calibration/receiver_gain_hx,(calib),float,"Measured receiver gain, H cross-pol channel"
+/radar_calibration/receiver_gain_vx,(calib),float,"Measured receiver gain, V cross-pol channel"
+/radar_calibration/base_1km_hc,(calib),float,"Reflectivity at 1km for SNR=0dB noise corrected, H co-pol channel"
+/radar_calibration/base_1km_vc,(calib),float,"Reflectivity at 1km for SNR=0dB noise corrected, V co-pol channel"
+/radar_calibration/base_1km_hx,(calib),float,"Reflectivity at 1km for SNR=0dB noise corrected, H cross-pol channel"
+/radar_calibration/base_1km_vx,(calib),float,"Reflectivity at 1km for SNR=0dB noise corrected, V cross-pol channel"
+/radar_calibration/sun_power_hc,(calib),float,"Calibrated sun power, H co-pol channel"
+/radar_calibration/sun_power_vc,(calib),float,"Calibrated sun power, V co-pol channel"
+/radar_calibration/sun_power_hx,(calib),float,"Calibrated sun power, H cross-pol channel"
+/radar_calibration/sun_power_vx,(calib),float,"Calibrated sun power, V cross-pol channel"
+/radar_calibration/noise_source_power_h,(calib),float,"Noise source power, H channel"
+/radar_calibration/noise_source_power_v,(calib),float,"Noise source power, V channel"
+/radar_calibration/power_measure_loss_h,(calib),float,"Power measurement loss in coax and connectors, H channel"
+/radar_calibration/power_measure_loss_v,(calib),float,"Power measurement loss in coax and connectors, V channel"
+/radar_calibration/coupler_forward_loss_h,(calib),float,"Coupler loss into waveguide, H channel"
+/radar_calibration/coupler_forward_loss_v,(calib),float,"Coupler loss into waveguide, V channel"
+/radar_calibration/zdr_correction,(calib),float,corrected = measured + correction
+/radar_calibration/ldr_correction_h,(calib),float,corrected = measured + correction
+/radar_calibration/ldr_correction_v,(calib),float,corrected = measured + correction
+/radar_calibration/system_phidp,(calib),float,"System PhiDP, as seen in drizzle close to radar"
+/radar_calibration/test_power_h,(calib),float,"Calibration test power, H channel"
+/radar_calibration/test_power_v,(calib),float,"Calibration test power, V channel"
+/radar_calibration/receiver_slope_hc,(calib),float,"Computed receiver slope, ideally 1.0, H co-pol channel"
+/radar_calibration/receiver_slope_vc,(calib),float,"Computed receiver slope, ideally 1.0, V co-pol channel"
+/radar_calibration/receiver_slope_hx,(calib),float,"Computed receiver slope, ideally 1.0, H cross-pol channel"
+/radar_calibration/receiver_slope_vx,(calib),float,"Computed receiver slope, ideally 1.0, V cross-pol channel"

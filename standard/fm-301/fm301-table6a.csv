@@ -1,0 +1,4 @@
+Variable path/name,Dimensions,Type,Comment
+/sweep_<n>/time,(time),double,Coordinate variable for the time dimension. Each value is the time at center of each ray
+/sweep_<n>/range,(range),float,Coordinate variable for the range dimension. Each value is range along beam propagation path to the center of each range bin
+/sweep_<n>/frequency,(frequency),float,List of operating frequencies in Hertz. In most cases only a single frequency is used.

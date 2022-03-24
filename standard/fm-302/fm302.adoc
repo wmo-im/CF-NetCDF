@@ -1,0 +1,112 @@
+== FM 302-XX WMO-CF MARINE TRAJECTORY
+=== Regulations
+
+. Scope
+
+.. This profile is intended for the reporting of meteorological and/or oceanographic observations along one or more trajectories, including both at or near the ocean surface and at depth, from a single platform. The trajectory may follow an undulating profile.
+.. A ragged array representation is used to allow multiple trajectories to be reported (e.g. see CF v1.8 conventions). This may be either a contiguous or indexed ragged array.
+.. Only data for a single platform shall be included in the file.
+.. Groups are not supported in this profile and groups other than the root group shall not be used.
+
+. Global scope / root group
+.. Global attributes
+... The regulations defined in section 6 for global attributes shall apply.
+... Table FM-302_1 lists the values to be used for the indicate attributes.
+.. Station / platform identifier
+... For platforms where a WIGOS station identifier has been assigned the identifier shall be included in the file using the `wmo\__wsi` global attribute.
+... For platforms without a WIGOS station identifier the traditional WMO identifier shall be reported using the `wmo\__id` global attribute.
+
+.. Dimensions
+
+... Files containing marine profile trajectory data shall have the following dimensions:
+.... `obs`, the `obs` dimension shall be used to indicate the total number of observations within the file.
+.... `trajectory`, the `trajectory` dimension shall be used to indicate the number of trajectories contained in the file and to index the observations to a trajectory. When there is a single trajectory in the file this shall have dimension 1.
+
+.. Coordinate Variables
+... Table FM-302_2 lists the coordinate variables that shall used with this profile.
+... For platforms located at the sea surface the depth shall be given as zero.
+... The observation locations relative to the sea surface shall then be given by the sensor installation height (`/<measurand_short_name>_<n>_sensor_installed_height`) variable. See 2.g.iv.
+
+.. Trajectory identification
+... Table FM-302_3 lists the variables that shall be used to identify the trajectory that an observation belongs to.
+... `trajectory` provides the identifier for a trajectory.
+... `trajectory_index` provides the trajectory that an observation belongs to.
+
+.. Data variables
+... The general regulations for data variables, including mandatory attributes, defined in regulation 5 shall apply.
+... Only data variables with a valid `standard_name` shall be included.
+... Data variables shall have a single dimension `obs`.
+... The NetCDF variable name shall be interpreted as the short name for the variable.
+... Multiple variables sharing the same short name shall follow the following naming convention: `<measurand_short_name>_<n>`, where `<n>` is incremented for each additional variable sharing the same short name. For example, `salinity_1` and `salinity_2` in the case of two salinity sensors on an observing platform.
+... The `trajectory_index` variable shall be used to indicate which trajectory an observation belongs to.
+
+.. Ancillary variables
+... The naming of the ancillary variables shall take the form `<measurand_short_name>_<n>_<ancillary_variable>`
+... Table FM-302_4 lists the mandatory ancillary variables that shall be reported for each observed / measured variable
+... Table FM-302_5 lists the conditional or optional ancillary variables defined for the observed / measured variables.
+... The installed height of a sensor shall be included when the sensor is not at the same depth (or height) specified by the depth variable. In this case the sensor depth (or height) relative to the sea surface shall be given by the installed height added to the depth.
+
+=== FM 302-XX Tables
+
+.Values that shall be used for the indicated global attributes.
+[caption="Table FM-302_1: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table1.csv[]
+|===
+
+.Coordinate variables that shall be used in the marine trajectory profile. Attributes are given in Table FM-302_2b.
+[caption="Table FM-302_2a: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table2a.csv[]
+|===
+
+.Attributes define for the coordinate variables given in Table FM-302_2a.
+[caption="Table FM-302_2b: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table2b.csv[]
+|===
+
+.Variables defined to identify the trajectory an observation belongs to and that shall be included in marine trajectory files. Attributes are listed in Table FM-302_3b.
+[caption="Table FM-302_3a: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table3a.csv[]
+|===
+
+.Attributes define for the trajectory variables listed in Table FM-302_3a.
+[caption="Table FM-302_3b: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table3b.csv[]
+|===
+
+.Ancillary variables defined and that shall be reported for each measured / observed variable. Attributes are given in Table FM-302_4b. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-302_4a: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table4a.csv[]
+|===
+
+.Attributes for the ancillary variables defined in Table FM-302_4a .<prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-302_4b: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table4b.csv[]
+|===
+
+.Conditional / optional ancillary variables defined and that should be reported for each measured / observed variable when the described conditions are met. Attributes are given in Table FM-302_5b. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-302_5a: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table5a.csv[]
+|===
+
+.Attributes for the ancillary variables defined in Table FM-302_5a. <prefix> has been used to represent <measurand_short_name>_<n>.
+[caption="Table FM-302_5b: "]
+[format="csv", options="header"]
+|===
+include::./fm302-table5b.csv[]
+|===

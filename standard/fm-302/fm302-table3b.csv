@@ -1,0 +1,4 @@
+Variable path / name,Attribute,Type,Value
+/trajectory,cf_role,string,"trajectory_id"
+/trajectory_index,long_name,string,"Index of the trajectory that this observation belongs to"
+,instance_dimension,string,"trajectory"

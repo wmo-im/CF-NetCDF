@@ -1,0 +1,5 @@
+Variable path / name,Attribute,Type,Value
+/<prefix>_sensor_calibration_date,standard_name,string,"time"
+,units,string,"""seconds since <reftime>"" where <reftime> is an ISO8601 time string of the form YYYY-MM-DDThh:mm:ssZ"
+,axis,string,"T"
+,calendar,string,"standard"

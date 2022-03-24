@@ -1,0 +1,10 @@
+Variable path / name,Attribute,Kind,Value
+/sweep_<n>/rays_angle_resolution,units,string,"""degrees"""
+/sweep_<n>/target_scan_rate,units,string,"""degrees/s"""
+/sweep_<n>/scan_rate,units,string,"""degrees/s"""
+/sweep_<n>/pulse_width,units,string,"""seconds"""
+/sweep_<n>/rx_range_resolution,units,string,"""meters"""
+/sweep_<n>/prt,units,string,"""seconds"""
+/sweep_<n>/prt_sequence,units,string,"""seconds"""
+/sweep_<n>/nyquist_velocity,units,string,"""meters/s"""
+/sweep_<n>/unambiguous_range,units,string,"""meters"""

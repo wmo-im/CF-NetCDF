@@ -1,0 +1,12 @@
+Variable path / name,Attribute,Kind,Value
+/sweep_<n>/monitoring/radar_measured_transmit_power_h,units,string,dBm
+/sweep_<n>/monitoring/radar_measured_transmit_power_v,units,string,dBm
+/sweep_<n>/monitoring/radar_measured_sky_noise,units,string,dBm
+/sweep_<n>/monitoring/radar_measured_cold_noise,units,string,dBm
+/sweep_<n>/monitoring/radar_measured_hot_noise,units,string,dBm
+/sweep_<n>/monitoring/phase_difference_transmit_hv,units,string,degrees
+/sweep_<n>/monitoring/antenna_pointing_accuracy_elev,units,string,degrees
+/sweep_<n>/monitoring/antenna_pointing_accuracy_az,units,string,degrees
+/sweep_<n>/monitoring/calibration_offset_h,units,string,dB
+/sweep_<n>/monitoring/calibration_offset_v,units,string,dB
+/sweep_<n>/monitoring/zdr_offset,units,string,dB

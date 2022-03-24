@@ -1,1 +1,0 @@
-- regulations on QC for observation data, examples from Kevin O'Brien to follow.

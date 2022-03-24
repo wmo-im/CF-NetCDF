@@ -1,0 +1,7 @@
+Variable path / name,Attribute,Kind,Value
+/lidar_parameters/beam_divergence,units,string,milliradians
+/lidar_parameters/field_of_view,units,string,milliradians
+/lidar_parameters/aperture_diameter,units,string,cm
+/lidar_parameters/aperture_efficency,units,string,percent
+/lidar_parameters/peak_power,units,string,watts
+/lidar_parameters/pulse_energy,units,string,joules

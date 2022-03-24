@@ -1,0 +1,12 @@
+Attribute name,Description,"Mandatory (M), Conditional \(C) or Optional (O)",Source convention or standard
+standard_name,"A standard name that references a description of a variable""s content in the standard name table",C - see regulations 3.d and 5.b.vii. See also profile definitions.,CF-1.8
+long_name,"A descriptive name that indicates a variable""s content. This name is not standardized.",O,"NUG, CF-1.8"
+wmo__parameter_uri,Link to external code registry to unambiguously identify the parameter or variable reported. This may be one from the codes.wmo.int registry or from another registry specified in the profile definitions.,M,WMO-CF 1.0
+wmo__parameter_name,Parameter name used to unambiguously identify the parameter or variable reported. Analogous to standard_name.,M,WMO-CF 1.0
+_FillValue,A value used to represent missing or undefined data. Allowed for auxiliary coordinate variables but not allowed for coordinate variables.,C - see regulation 5.b.xv,"NUG, CF-1.8"
+valid_range,Smallest and largest valid values of a variable.,M,CF-1.8
+scale_factor,"If present for a variable, the data are to be multiplied by this factor after the data are read by an application. See also the add_offset attribute.",O,"NUG, CF-1.8"
+add_offset,"If present for a variable, this number is to be added to the data after it is read by an application. If both scale_factor and add_offset attributes are present, the data are first scaled before the offset is added.",O,"NUG, CF-1.8"
+units,Units of a variable's content.,C - see regulation 5.b.xii,"NUG, CF-1.8"
+coordinates,"Identifies auxiliary coordinate variables, label variables, and alternate coordinate variables.",C - see profile definitions,CF-1.8
+ancillary_variables,"Identifies a variable that contains closely associated data, e.g., the measurement uncertainties of instrument data.",C - see regulation 5.b.xix,CF-1.8

@@ -1,0 +1,6 @@
+Variable path/name,Dimensions,Kind,Comment
+/radar_parameters/antenna_gain_h,none,float,"Nominal antenna gain, H polarization"
+/radar_parameters/antenna_gain_v,none,float,"Nominal antenna gain, V polarization"
+/radar_parameters/beam_width_h,none,float,"Antenna beam width, H polarization"
+/radar_parameters/beam_width_v,none,float,"Antenna beam width, V polarization"
+/radar_parameters/receiver_bandwidth,none,float,Bandwidth of radar receiver

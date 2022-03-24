@@ -1,0 +1,4 @@
+Variable path/name,Dimensions,Type,Comment
+/altitude_agl,,double,Altitude of instrument above ground level. This is the center of rotation of the antenna
+/primary_axis,,string,Principle axis of rotation. Allowed values are specified in Table 15.
+/status_str,,string,"General-purpose string for storing any information that is not included in other parts of the data structure. Any text-based encoding may be used including simple text, XML, JSON etc"

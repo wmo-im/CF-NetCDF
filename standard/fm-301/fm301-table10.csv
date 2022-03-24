@@ -1,0 +1,25 @@
+Attribute name,Type,Convention,Value or description
+_Undetect,same as field data,ODIM,Indicates an area (range bin) that has been radiated but has not produced a valid echo
+sampling_ratio,float,CF/Radial,Number of samples for this field divided by `n_samples`.
+is_discrete,Boolean / string,CF/Radial,"""true"" or ""false"". If ""true"", this indicates that the field takes on discrete values, rather than floating point values. For example, if a field is used to indicate the hydrometeor type, this would be a discrete field."
+field_folds,Boolean / string,CF/Radial,"""true"" or ""false"". Used to indicate that a field is limited between a min and max value, and that it folds between the two extremes. This typically applies to such fields as radial velocity and PhiDP"
+fold_limit_lower,float,CF/Radial,"If `field_folds` is ""true"", this indicates the lower limit at which the field folds."
+fold_limit_upper,float,CF/Radial,"If `field_folds` is ""true"", this indicates the upper limit at which the field folds."
+is_quality_field,Boolean / string,CF/Radial,"Set to ""true"" if this Dataset stores a quality control field."
+flag_values,same as field data,CF,"Array of flag values. These values have special meaning, as documented in `flag_meanings`."
+flag_meanings,string,CF,Meaning of `flag_values` or `flag_masks`.
+flag_masks,same as field data,CF,Valid bit-wise masks used in a flag field that is comprised of bit-wise combinations of mask values. See `flag_meanings`.
+qualified_variables,string,CF/Radial,"Applicable if `is_quality_field` is ""true"". Array list of variables that this variable qualifies. Every field variable in this list should list this variable in its `ancillary_variable` attribute."
+ancillary_variables,string,CF,"Array list of variables to which this variable is related. In particular, this is intended to list the variables that contain quality information about this field. In that case, the quality field will list this field in its `qualified_variable` attribute."
+thresholding_xml,string,CF/Radial,Thresholding details. Supplied if thresholding has been applied to the field.
+,,,This should be in self-descriptive XML. For example:
+,,,`<thresholding field=""DBZ"">`
+,,,`<field_used>`
+,,,`<name>NCP</name>`
+,,,`<min_val>0.15</min_val>`
+,,,`</field_used>`
+,,,`<field_used>`
+,,,`<name>SNR</name>`
+,,,`<min_val>-3.0</min_val>`
+,,,`</field_used>`
+,,,`</thresholding>`

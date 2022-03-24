@@ -1,0 +1,183 @@
+= WMO CF-Extensions
+
+10 March 2021, version 0.1
+
+== DEFINITIONS
+
+*CF Conventions*: The Climate and Forecast Conventions for netCDF (CF Conventions; e.g. Eaton et al., 2020) define a
+minimum set of metadata required to ensure that conforming netCDF files meet a basic level of self-description and interoperability.
+The required (minimal) set of metadata ensures that all variables in a dataset have “an associated description of what it represents,
+including physical units if appropriate, and that each value can be located in space (relative to earth-based coordinates) and time”.
+Additional metadata are defined by the CF Conventions but are only recommended where they may not be needed or appropriate for all datasets.
+
+*WMO-CF Extensions*: The WMO-CF extensions build on the CF Conventions to provide the framework for standardizing semantics and metadata,
+further reducing the effort involved in specifying data products and increasing interoperability. The WMO-CF:
+
+. Define additional metadata requirements or recommendations that are not defined by the CF Conventions;
+. Specify the set of optional CF Conventions metadata that this extension requires, making those optional metadata mandatory.
+
+*WMO-CF Profiles*: The WMO-CF profiles implement the WMO-CF extensions for different data types by, inter alia:
+defining the standardized metadata and semantics;
+specifying the names of dimension and coordinate variables;
+and specifying the ordering of dimensions.
+The WMO-CF Profiles reduce the degrees of freedom available when creating netCDF files, increasing the
+standardization of data from different publishers for the same type of data.
+
+== FM System of Numbering WMO-CF Extensions and Profiles
+Each WMO-CF profile or extension bears a number (X), preceded by the letters FM. This
+number is followed by the year (Y) and month (m) of operational implementation in the form
+FM X-Y-M.
+Furthermore, an indicator term is used to designate the WMO-CF profile colloquially and is therefore called a “code name”.
+
+=== FM SYSTEM OF WMO-CF PROFILES
+
+[cols="1,1"]
+|===
+| *FM 301-XX*
+
+WMO-CF Radial
+| Reports from operational weather radar
+
+| *FM 302-XX*
+
+WMO-CF Marine Trajectory
+| Profile for the representation of meteorological / oceanographic observations along a trajectory within the ocean (or other body of water) or at / near the ocean surface.
+
+Example observing platforms include, inter alia: crewed vessels making observations at the sea surface along a track; autonomous surface vehicles making similar measurements; and oceanographic gliders making measurements along a track.
+|===
+
+=== REPRESENTATION OF INFORMATION IN THE WMO-CF PROFILES AND EXTENSION
+
+. NetCDF version and features
+.. WMO-CF files should be encoded in version 4 of the NetCDF format.
+.. String data should be encoded using the string atomic data type.
+
+. Representation of information in the WMO-CF NetCDF Extension and WMO-CF profiles.
+.. Data shall conform with version 1.8 or higher of the netCDF conventions for CF (Climate and Forecast) metadata (CF hereafter).The version shall be specified in the `Conventions` global attribute (see section 6).
+.. Data shall conform with version 1.3 or higher of the Attribute Convention for Data Discovery (ACDD) conventions. The version shall be specified in the `Conventions` global attribute (see section 6).
+.. Data shall also conform with the regulations and the WMO-CF extensions defined within this document.
+.. Data conforming with the WMO-CF extensions shall be identified by the use of the label `WMO-CF n.n` in the `Conventions` global attribute (see section 6) where `n.n` is the version number.
+.. Data shared on the WIS shall conform with one of the WMO-CF profiles defined within this document.
+.. Creators of WMO-CF files shall ensure that they validate against the specified CF conventions and the WMO-CF extensions.
+.. Attributes defined as part of the WMO-CF extension shall use the `wmo__` namespace (double underscore).
+.. Any attribute using the `wmo__` namespace but not defined as part of the WMO-CF extension shall be invalid.
+
+. Dimensions and Coordinate Variables
+.. Dimension names shall be specified within the WMO-CF Profiles defined below.
+.. The order of the dimensions within a variable shall be specified within the WMO-CF Profiles.
+.. The coordinate variable names shall be defined within the WMO-CF Profiles.
+.. The `standard_name` attribute shall be used for all coordinate variables.
+.. The `units` attribute shall be used for all coordinate variables.
+.. The `axis` attribute shall be used to indicate the spatiotemporal coordinates (X, Y, Z, T) when present.
+.. Time coordinate variables (T) shall include the `calendar` attribute.
+
+. Station identifiers
+.. Each station included in a data file shall be identifiable via:
+... A WIGOS Station Identifier (WSI), or
+... A traditional WMO Identifier (e.g. 5-digit or 7-digit code), if no WIGOS Station Identifier has been assigned, or
+... An alternative station identifier, if no WIGOS Station Identifier or traditional WMO Identifier has been assigned. For example, ship ITU callsign.
+.. The `WIGOS Station Identifier` shall be stored as a string using the standard notation:
+... <WIGOS station identifier series>-<issuer of identifier>-<issue number>-<local identifier>
+.. The form of the traditional WMO Identifier to be used shall be specified within the WMO-CF profile definitions below.
+.. The form of the alternative station identifier, if required, shall be specified within the WMO-CF profile definitions below.
+.. Data files containing data from a single station shall store the WIGOS Station Identifier and traditional WMO identifier using the `wmo\__wsi` and `wmo__id` global attributes respectively.
+.. Data files containing data from multiple stations shall store station identifiers according to the WMO-CF profile definitions below.
+
+. General regulations for variables and variable attributes
+.. A distinction is made between those variables that contain observed, measured or simulated data (hereafter data variables) and those containing metadata or ancillary information (ancillary data).
+.. Data variables
+... Table 1 below lists the variable attributes that are defined for observed
+data and for use with the WMO-CF extensions.
+... Attributes marked mandatory (M) shall be included for all variables.
+... Attributes marked conditional \(C) shall be included when the conditions described below are met.
+... Attributes marked optional (O) are optional.
+... Additional attributes may be defined as part of the WMO-CF Profiles listed in this volume.
+... Other attributes not defined, either in the general regulations or in the profiles, may be used but have no meaning within the context of the WMO-CF Extensions.
+... The `standard_name` attribute shall be used when there is an existing definition in the CF conventions.
+... The `long_name` attribute should be used to describe the content of the
+variable.
+... The `wmo\__parameter_uri` and `wmo__parameter_name` attributes shall be used to unambiguously identify the observed/measured parameter being reported.
+... The `wmo__parameter_uri` shall point to an entry in a codes registry authorized for use within the profile of the data product. The use of codes.wmo.int is authorized for all profiles; individual WMO-CF profiles may additionally define their own list of authorized registries.
+... The `units` attribute shall be reported for all variables that represent dimensional quantities.
+... When reported, the `units` shall be selected from those in WMO Common Code Table C-6 and represented using a string recognisable by the UDUnits package.
+... If a variable is packed into an integer value the `scale_factor` and `add_offset` shall be used as defined in the NetCDF User Guide and in the CF Conventions.
+... Variables that contain missing data shall include the `_FillValue` attribute and use this to indicate the default fill value and value of missing data.
+... Variables that contain missing data shall also include the `valid_range` attribute to indicate the range of valid values expected.
+... The `valid_range` attribute shall indicate the full range of values that are valid and not just the range of values reported in the file.
+... For observed variables where metadata or other information is available in an ancillary variable the link shall be made using the `ancillary_variables` attribute.
+... Where there is a requirement for metadata to be reported this shall be included in the profile definitions below.
+
+.. Ancillary data
+... Ancillary variables contain metadata or information about one or more observed variables.
+... Ancillary variables shall be referenced from the associated data variables with CF `ancillary_variables` attributes as described in CF Section 3.4 “Ancillary Variables”.
+... Where the ancillary variable has a physical meaning, for example observation height above a reference surface, then the rules for observed data shall also apply.
+... For efficiency the ancillary data may be encoded using either flags or masks following the CF conventions, see example 1.
+... When ancillary data are encoded the `flag_meanings` and either `flag_values` or `flag_masks` shall be included in the file following the CF conventions.
+... Where a code list or controlled vocabulary is specified in the WMO-CF profile definition then only values from that code list shall be valid for the `flag_meanings`.
+... The relevant code list or controlled vocabulary shall be indicated via the `wmo\__parameter_name` and `wmo__parameter_uri` attribute, see example 1.
+... Attributes containing Boolean values shall be encoded as either the string ‘true’ or ‘false’.
+... No meaning or default value should be inferred by the absence of an ancillary variable.
+... No meaning shall be inferred by data set to the missing value.
+
+. Global attributes
+.. Table 2 lists the global attributes defined for use with WMO CF-1.0. This includes attributes defined in other conventions, such as the Attribute Convention for Data Discovery 1-3 (ACDD 1-3) and the CF conventions, and the netCDF user guide (NUG).
+.. Attributes marked mandatory (M) shall be included for all variables.
+.. Attributes marked conditional \(C) shall be included when the conditions described below are met.
+.. Attributes marked optional (O) are optional.
+.. Additional attributes may be defined as part of the WMO-CF Profiles listed in this volume.
+.. Other attributes not defined in the general regulations, the profiles or the CF conventions may be used but have no meaning within the context of the WMO-CF Extensions.
+.. The `Conventions` attribute shall be used to indicate the conventions followed by a dataset. Where multiple conventions are followed these shall be comma separated.
+.. The `featureType` attribute shall be used for files containing discrete sampling geometries to indicate the type of geometry.
+.. The `standard_name_vocabulary` attribute shall be used to indicate the version of the `standard_name` table used.
+.. The following global attributes are defined as part of the WMO-CF extension and shall be included:
+... `wmo\__cf_profile`. The `wmo__cf_profile` attribute shall indicate the specific profile included within a file and shall reference one of the profiles defined within this volume.
+... `wmo\__originating_centre`. The `wmo__originating_centre` attribute shall be used to identify the originator of the files. Valid values are defined in Common Code Table C-11. Where data originate from outside of the WMO system the `wmo__originating_centre` attribute may be omitted.
+... `wmo\__originating_sub_centre`. The `wmo__originating_sub_centre` attribute shall be used to identify the originating sub centre where different from the originating centre. Valid values are defined in Common Code Table C-12. Where data originate from outside of the WMO system the `wmo__originating_sub_centre` attribute may be omitted.
+... `wmo\__data_category`. The `wmo__data_category` attribute shall be included to identify the type of data contained within the file. Valid values are given in Common Code Table C-13.
+... `wmo\__update_sequence_number`. The `wmo__update_sequence_number` attribute shall be included and used to indicate whether the data are original or updated. The rules shall follow those defined for BUFR (zero for original messages and for messages containing only delayed reports; incremented for the other updates).
+... `wmo\__wsi`. The `wmo__wsi` attribute shall be used to indicate a WIGOS Station identifier of the observing station or platform to which the file relates. The `wmo__wsi` attribute shall be omitted if the file contains data related to multiple stations, or if no WIGOS Station Identifier has been assigned.
+... `wmo\__id`. The `wmo__id` attribute shall be used to indicate the traditional WMO identifier of the observing station or platform to which the file relates. The `wmo__id` attribute shall be omitted if the file contains data related to multiple stations.
+
+. Compression and chunking
+.. Compression, or chunking, may be used on variables within a NetCDF file.
+.. Data can furthermore be compressed or chunked using HDF filters. If this is the case however the data producer must use a method that has been agreed upon by ET-Data. In that case the filter in question would be described in this volume. The following minimum requirements shall apply:
+... Decompression algorithm is open;
+... Software implementing this is freely available;
+... Filter number is registered with HDF Group to avoid name clashes.
+
+=== Tables
+
+.List of defined variable attributes for ancillary and data variables.
+[caption="Table 1: "]
+[format="csv", options="header", frame="all"]
+|===
+include::./tables/table_1.csv[]
+|===
+
+.List of defined global attributes.
+[caption="Table 2: "]
+[format="csv", options="header"]
+|===
+include::./tables/table_2.csv[]
+|===
+
+
+=== Examples
+
+*Example 1* Minimal example showing the use of flag values and flag meanings attribute to record the anemometer type.
+
+[source, c]
+----
+int anemometer_type( obs );
+    anemometer_type:long_name="type of anemometer";
+    anemometer_type:flag_values= 0, 1, 2, 3, 15;
+    anemometer_type:flag_meanings="Cup_rotor Propeller_rotor Sonic Wind_observation_through_ambient_noise Missing_value";
+    anemometer_type:wmo__parameter_name="Anemometer type";
+    anemometer_type:wmo__parameter_uri="http://codes.wmo.int/bufr4/codeflag/_0-02-169";
+----
+
+=== References / links
+* Brian Eaton, Jonathan Gregory, Bob Drach, Karl Taylor, Steve Hankin, Jon Blower, John Caron, Rich Signell, Phil Bentley, Greg Rappa, Heinke Höck, Alison Pamment, Martin Juckes, Martin Raspaud, Randy Horne, Timothy Whiteaker, David Blodgett, Charlie Zender, Daniel Lee, 2020: NetCDF Climate and Forecast (CF), Version 1.8. 183pp, available from http://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html.
+* https://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html
+* https://www.unidata.ucar.edu/software/netcdf/docs/user_guide.html
+* https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3

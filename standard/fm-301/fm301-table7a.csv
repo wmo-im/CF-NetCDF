@@ -1,0 +1,8 @@
+Variable path/name,Dimensions,Kind,Comment
+/sweep_<n>/sweep_number,(range),int,"The index of the sweep within the volume, 0-based."
+/sweep_<n>/sweep_mode,none,string,Type of sweep that was performed. Allowed values are listed in Table 15
+/sweep_<n>/follow_mode,none,string,Target following mode used to control antenna pointing. Allowed value are listed in Table 15
+/sweep_<n>/prt_mode,none,string,"Pulsing mode used for sweep. Standard allowed values are listed in Table 15. More complicated pulsing schemes may also be represented using a sequence of ""H"" and ""V"" characters. For example ""HHVVH"""
+/sweep_<n>/fixed_angle,none,float,"Target angle for the sweep.  In most sweep modes this is the elevation angle, for RHI mode this is the azimuth angle"
+/sweep_<n>/azimuth,(time),float,Azimuth of the antenna relative to true north at the center of dwell for each ray of the sweep.
+/sweep_<n>/elevation,(time),float,Elevation of the antenna relative to true north at the center of dwell for each ray of the sweep.

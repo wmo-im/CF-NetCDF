@@ -1,0 +1,45 @@
+Variable path / name,Attribute,Kind,Value
+/radar_calibration/time,units,string,"""seconds since <reftime>"" where <reftime> is an ISO8601 time string of the form YYYY-MM-DDThh:mm:ssZ"
+/radar_calibration/pulse_width,units,string,seconds
+/radar_calibration/antenna_gain_h,units,string,dB
+/radar_calibration/antenna_gain_v,units,string,dB
+/radar_calibration/xmit_power_h,units,string,dBm
+/radar_calibration/xmit_power_v,units,string,dBm
+/radar_calibration/two_way_waveguide_loss_h,units,string,dB
+/radar_calibration/two_way_waveguide_loss_v,units,string,dB
+/radar_calibration/two_way_radome_loss_h,units,string,dB
+/radar_calibration/two_way_radome_loss_v,units,string,dB
+/radar_calibration/receiver_mismatch_loss,units,string,dB
+/radar_calibration/receiver_mismatch_loss_h,units,string,dB
+/radar_calibration/receiver_mismatch_loss_v,units,string,dB
+/radar_calibration/radar_constant_h,units,string,m/mW dB units
+/radar_calibration/radar_constant_v,units,string,m/mW dB units
+/radar_calibration/probert_jones_correction,units,string,dB
+/radar_calibration/noise_hc,units,string,dBm
+/radar_calibration/noise_vc,units,string,dBm
+/radar_calibration/noise_hx,units,string,dBm
+/radar_calibration/noise_vx,units,string,dBm
+/radar_calibration/receiver_gain_hc,units,string,dB
+/radar_calibration/receiver_gain_vc,units,string,dB
+/radar_calibration/receiver_gain_hx,units,string,dB
+/radar_calibration/receiver_gain_vx,units,string,dB
+/radar_calibration/base_1km_hc,units,string,dBZ
+/radar_calibration/base_1km_vc,units,string,dBZ
+/radar_calibration/base_1km_hx,units,string,dBZ
+/radar_calibration/base_1km_vx,units,string,dBZ
+/radar_calibration/sun_power_hc,units,string,dBm
+/radar_calibration/sun_power_vc,units,string,dBm
+/radar_calibration/sun_power_hx,units,string,dBm
+/radar_calibration/sun_power_vx,units,string,dBm
+/radar_calibration/noise_source_power_h,units,string,dBm
+/radar_calibration/noise_source_power_v,units,string,dBm
+/radar_calibration/power_measure_loss_h,units,string,dB
+/radar_calibration/power_measure_loss_v,units,string,dB
+/radar_calibration/coupler_forward_loss_h,units,string,dB
+/radar_calibration/coupler_forward_loss_v,units,string,dB
+/radar_calibration/zdr_correction,units,string,dB
+/radar_calibration/ldr_correction_h,units,string,dB
+/radar_calibration/ldr_correction_v,units,string,dB
+/radar_calibration/system_phidp,units,string,degrees
+/radar_calibration/test_power_h,units,string,dBm
+/radar_calibration/test_power_v,units,string,dBm

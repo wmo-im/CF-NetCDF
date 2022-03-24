@@ -1,0 +1,13 @@
+Variable path/name,Attribute ,Type,Value
+/time_coverage__start,units,string,"""seconds since <reftime>"" where <reftime> is an ISO8601 time string of the form YYYY-MM-DDThh:mm:ssZ"
+,calendar,string,See CF Conventions Appendix A
+,standard_name,string,"""time"""
+/time_coverage_end,units,string,"""seconds since <reftime>"" where <reftime> is an ISO8601 time string of the form YYYY-MM-DDThh:mm:ssZ"
+,calendar,string,See CF Conventions Appendix A
+,standard_name,string,"""time"""
+/latitude,units,string,"""degrees_north"""
+,standard_name,string,"""latitude"""
+/longitude,units,string,"""degrees_east"""
+,standard_name,string,"""longitude"""
+/altitude,units,string,"""meters"""
+,standard_name,string,"""height_above_reference_elliposid"""

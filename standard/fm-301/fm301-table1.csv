@@ -1,0 +1,8 @@
+Name,Type,Convention,Value or description
+instrument_name,string,CF/Radial,Name of radar or lidar
+institution,String,CF,See CF Conventions Appendix A
+references,String,CF,See CF Conventions Appendix A
+source,String,CF,See CF Conventions Appendix A
+history,String,CF,See CF Conventions Appendix A
+comment,String,CF,See CF Conventions Appendix A
+platform_is_mobile,string,Cf/Radial,"""false""" (mobile platforms are not supported by this profile)
